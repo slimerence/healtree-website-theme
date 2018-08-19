@@ -19,6 +19,9 @@
             </div>
         </section>
     </main>
+    @if(env('activate_ecommerce',false))
+        @include( _get_frontend_layout_path('frontend.mobile.shopping_cart_mobile') )
+    @endif
 @else
     <!-- Desktop Version -->
     @include(_get_frontend_layout_path('frontend.top_bar'))

@@ -12,11 +12,11 @@
         <a class="has-text-white navbar-item" href="#">
             Catalog
         </a>
-            @foreach($categoriesTree as $category)
-                <p class="pl-20">
-                    <a class="has-text-white navbar-item" href="">- {{ $category->name }}</a>
-                </p>
-            @endforeach
+    @foreach($categoriesTree as $category)
+        <p class="pl-20">
+            <a class="has-text-white navbar-item" href="{{ $category->getCategoryUrl() }}">- {{ $category->name }}</a>
+        </p>
+    @endforeach
         </section>
     @endif
     <!-- e-commerce end -->

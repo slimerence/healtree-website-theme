@@ -73,7 +73,7 @@
                 ></el-autocomplete>
             </div>
         @endif
-        @if(env('activate_ecommerce',false))
+        @if(env('activate_ecommerce',false) && !$agentObject->isPhone())
             @include(_get_frontend_layout_path('frontend.shopping_cart'))
         @endif
     </div>
