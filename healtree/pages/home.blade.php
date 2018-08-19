@@ -5,14 +5,14 @@
         <div class="content pt-20 mt-20">
             <div class="columns">
                 <div class="column category-block-at-home">
-                    <a href="">
+                    <a href="{{ url('/category/view/Essential-Oil-Serial') }}">
                         <h3 class="has-text-centered">{{ strtoupper('Essential Oil Serial') }}</h3>
                         <p class="has-text-centered">ORGANIC INGREDIENTS</p>
                         <img src="{{ asset('images/frontend/essential-products.jpg') }}" class="image" alt="Essential Oil">
                     </a>
                 </div>
                 <div class="column category-block-at-home">
-                    <a href="">
+                    <a href="{{ url('/category/view/Carrier-Oil') }}">
                         <h3 class="has-text-centered">{{ strtoupper('CARRIER OIL') }}</h3>
                         <p class="has-text-centered">ORGANIC INGREDIENTS</p>
                         <img src="{{ asset('images/frontend/health-oil.jpg') }}" class="image" alt="Health Oil">
