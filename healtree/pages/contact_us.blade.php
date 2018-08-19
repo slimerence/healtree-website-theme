@@ -2,9 +2,6 @@
 @section('content')
 {!! div_container() !!}
     {!! div_content(['class'=>'pl-20 pr-20 page-content-wrap']) !!}
-    <br>
-    <h1 class="is-size-1 has-text-centered is-uppercase">{{ trans('general.menu_contact') }}</h1>
-    <br>
     {!! div_row(['id'=>'contact-us-app']) !!}
     <div class="column">
         <div class="box">
