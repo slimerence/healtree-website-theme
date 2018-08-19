@@ -40,7 +40,7 @@
                         @foreach($featureProducts as $featureProduct)
                             <div class="column">
                                 <div class="show-mask">
-                                    <img src="http://healtree.smartbro.com.au{{ $featureProduct->getProductDefaultImageUrl() }}" alt="{{ $featureProduct->name }}" class="image mb-10">
+                                    <img src="{{ $featureProduct->getProductDefaultImageUrl() }}" alt="{{ $featureProduct->name }}" class="image mb-10">
                                     <div class="mask">
                                         <a href="{{ url('catalog/product/'.$featureProduct->uri) }}">
                                             <p class="name is-size-4">{{ $featureProduct->name }}</p>
