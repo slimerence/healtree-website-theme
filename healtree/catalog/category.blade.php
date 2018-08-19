@@ -111,11 +111,7 @@
                                     <?php
                                     }
                                 ?>
-                                @if($product->group_id)
-                                    <p class="is-pulled-right"><span class="tag is-danger">{{ $product->group->name }}</span></p>
-                                @else
-                                    <p class="is-pulled-right"><span class="tag is-info">{{ str_replace('_',' ',env('APP_NAME')) }}</span></p>
-                                @endif
+
                                 <div class="is-clearfix"></div>
                                     <a href="{{ url('catalog/product/'.$product->uri) }}">
                                     <p class="has-text-centered p-img">
