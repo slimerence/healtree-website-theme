@@ -111,7 +111,7 @@
                                     <?php
                                     }
                                 ?>
-                                    <hr>
+                                    <br>
                                 <div class="is-clearfix"></div>
                                     <a href="{{ url('catalog/product/'.$product->uri) }}">
                                     <p class="has-text-centered p-img">
