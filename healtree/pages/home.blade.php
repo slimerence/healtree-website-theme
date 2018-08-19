@@ -1,7 +1,6 @@
 @extends(_get_frontend_layout_path('frontend'))
 @section('content')
     <div class="container">
-
         <div class="content pt-20 mt-20">
             <div class="columns">
                 <div class="column category-block-at-home">
