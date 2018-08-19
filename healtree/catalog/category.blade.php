@@ -193,7 +193,7 @@
                 <el-input v-model="enquiryForm.name" v-show="!userIsLocated" placeholder="Your Name" class="mb-10"></el-input>
                 <el-input v-model="enquiryForm.email" v-show="!userIsLocated" placeholder="Email" class="mb-10"></el-input>
                 <el-input v-model="enquiryForm.phone" placeholder="Phone" class="mb-10"></el-input>
-                <el-input type="textarea" v-model="enquiryForm.message" placeholder="Say Something ..."></el-input>
+                <el-input type="textarea" v-model="enquiryForm.message" placeholder="Say Something ..." :autosize="{ minRows: 6, maxRows: 12 }"></el-input>
             </el-form>
             <div slot="footer" class="dialog-footer">
                 <el-button @click="cancelEnquiry">Cancel</el-button>
