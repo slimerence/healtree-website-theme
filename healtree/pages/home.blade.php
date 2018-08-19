@@ -66,8 +66,8 @@
                 </div>
                 <div class="column m-0">
                     <div class="content">
-                        <div class="panel">
-                            <h2 class="has-text-white mt-20">About Healtree</h2>
+                        <div class="panel pl-20 pr-20 mb-20">
+                            <h2 class="has-text-white">About Healtree</h2>
                             <p>
                                 Healtree is a pure botanic essence brand from Australia. We extract every drop of essence from pure and potent plants to revitalize your body and mind. At Healtree, we believe health is the most important thing in our life, and our goal is improving your physical and emotional wellbeing based on scientific research and developing natural products to make your life healthier and happier.
                             </p>
