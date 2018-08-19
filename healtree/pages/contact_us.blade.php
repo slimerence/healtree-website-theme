@@ -2,6 +2,7 @@
 @section('content')
 {!! div_container() !!}
     {!! div_content(['class'=>'pl-20 pr-20 page-content-wrap']) !!}
+    <br>
     {!! div_row(['id'=>'contact-us-app']) !!}
     <div class="column">
         <div class="box">
