@@ -186,6 +186,21 @@
             <hr>
         @endif
 
+        @if($agentObject->isPhone())
+        <el-dialog title="Enquiry" :visible.sync="showSendEnquiryForm" width="80%" :modal-append-to-body="false">
+            <el-form :model="enquiryForm" :rules="rules" ref="enquiryDataForm">
+                <el-input v-model="enquiryForm.selectedProductName" placeholder="Product" class="mb-10"></el-input>
+                <el-input v-model="enquiryForm.name" v-show="!userIsLocated" placeholder="Your Name" class="mb-10"></el-input>
+                <el-input v-model="enquiryForm.email" v-show="!userIsLocated" placeholder="Email" class="mb-10"></el-input>
+                <el-input v-model="enquiryForm.phone" placeholder="Phone" class="mb-10"></el-input>
+                <el-input type="textarea" v-model="enquiryForm.message" placeholder="Say Something ..."></el-input>
+            </el-form>
+            <div slot="footer" class="dialog-footer">
+                <el-button @click="cancelEnquiry">Cancel</el-button>
+                <el-button type="primary" @click="sendEnquiryAction('enquiryDataForm')">Submit</el-button>
+            </div>
+        </el-dialog>
+        @else
         <el-dialog title="Enquiry" :visible.sync="showSendEnquiryForm">
             <el-form :model="enquiryForm" :rules="rules" ref="enquiryDataForm">
                 <el-form-item label="Product" :label-width="formLabelWidth">
@@ -209,5 +224,6 @@
                 <el-button type="primary" @click="sendEnquiryAction('enquiryDataForm')">Submit</el-button>
             </div>
         </el-dialog>
+        @endif
     </div>
 @endsection
