@@ -26,7 +26,7 @@
         @if( \Illuminate\Support\Facades\URL::current() == url('/'))
             <!-- 首页 -->
             @if(env('show_ecommerce_sub_categories_at_home',true))
-                @include(_get_frontend_layout_path('frontend.header_catalog'))
+                @include(_get_frontend_layout_path('frontend.header'))
                 {!! div_container() !!}
                     <div class="columns is-marginless is-paddingless" id="catalog-viewer-app">
                         <div class="column is-2 is-marginless is-paddingless" style="width: {{ env('catalog_trigger_menu_width',161) }}px;">
