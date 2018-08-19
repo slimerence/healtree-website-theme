@@ -60,24 +60,6 @@
                 </div>
             </div>
 
-            <div class="columns border-dotted-top">
-                <div class="column is-2">
-                    <p class="is-size-6">
-                        <a class="has-text-grey" href="{{ url('catalog/brands/all') }}">&nbsp;Brands</a>
-                    </p>
-                </div>
-                <div class="column">
-                    <?php $brands = $category->loadBrands(); ?>
-                    <div class="control">
-                        <div class="tags has-addons">
-                            @foreach($brands as $brand)
-                            <a class="tag is-size-7 mr-10" href="{{ url('/catalog/brand/load?name='.$brand->name) }}">{{ $brand->name }}</a>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             @if(isset($price_ranges) && count($price_ranges)>0)
             <div class="columns border-dotted-top">
                 <div class="column is-2">
@@ -129,7 +111,6 @@
             </div>
             @endif
             <div class="column category-products-page-wrap">
-                @include(_get_frontend_theme_path('catalog.elements.filters'))
                 @include(_get_frontend_theme_path('catalog.elements.simple_paginate'))
                 <div class="is-clearfix"></div>
                 <br>
