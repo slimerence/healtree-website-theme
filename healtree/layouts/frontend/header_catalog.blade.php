@@ -74,7 +74,7 @@
             </div>
         @endif
         @if(env('activate_ecommerce',false))
-            @include('layouts.frontend.shopping_cart')
+            @include(_get_frontend_layout_path('frontend.shopping_cart'))
         @endif
     </div>
 </nav>
@@ -85,7 +85,7 @@
                 <a id="catalog-viewer-app" class="navbar-item product-category-root" href="#"
                    style="background-color: {{ $siteConfig->theme_main_color?$siteConfig->theme_main_color:'#ffffff' }};"
                 >
-                    <i class="fas fa-cube"></i>&nbsp;&nbsp;Catalog
+                    <i class="fa fa-cart-plus" aria-hidden="true"></i>&nbsp;&nbsp;Catalog
                     <div class="columns is-marginless is-paddingless" id="" style="position: absolute;left:0;top:52px;">
                         <?php
                         $categories = [];

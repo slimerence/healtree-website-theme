@@ -73,7 +73,7 @@
         </div>
         @endif
         @if(env('activate_ecommerce',false))
-        @include('layouts.frontend.shopping_cart')
+            @include(_get_frontend_layout_path('frontend.shopping_cart'))
         @endif
     </div>
 </nav>
@@ -83,7 +83,7 @@
             @if(isset($categoriesTree) && count($categoriesTree) > 0)
                 <a id="product-category-root" class="navbar-item" href="#"
                    style="width: {{ config('system.CATALOG_TRIGGER_MENU_WIDTH') }}px; background-color: {{ $siteConfig->theme_main_color?$siteConfig->theme_main_color:'#ffffff' }};">
-                    <i class="fas fa-cube"></i>&nbsp;&nbsp;Catalog
+                    <i class="fa fa-cart-plus" aria-hidden="true"></i>&nbsp;&nbsp;Catalog
                 </a>
             @endif
             @foreach($rootMenus as $key=>$rootMenu)
