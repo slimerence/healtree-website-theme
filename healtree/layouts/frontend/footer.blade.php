@@ -1,7 +1,7 @@
 @if(isset($footer))
 {!! $footer->content !!}
 @else
-<div class="footer d-flex justify-content-center">
+<div class="footer d-flex justify-content-center mt-20">
     <div class="columns m-0">
         <div class="column">
             <div class="p-2 has-text-centered">Copyright © {{ date('Y') }} {{ str_replace('_',' ',env('APP_NAME')) }}. All rights reserved.</div>
