@@ -1,34 +1,6 @@
 @extends(_get_frontend_layout_path('catalog'))
 @section('content')
     <div class="content pl-20 pr-20 page-content-wrap" id="category-view-manager">
-        @if(isset($featureProducts) && count($featureProducts)>0)
-        <hr>
-        {!! div_row() !!}
-            {!! div_col(1) !!}
-                <i class="far fa-thumbs-up is-size-1 has-text-danger"></i>
-                <br>
-                <p class="has-text-left has-text-danger is-size-7 mt-10">Feature Products</p>
-            {!! div_end() !!}
-            {!! div_col(11) !!}
-                {!! div_row() !!}
-                    @foreach($featureProducts as $featureProduct)
-                    {!! div_col() !!}
-                        <div class="show-mask-on-hover">
-                            <img src="{{ $featureProduct->getProductDefaultImageUrl() }}" alt="{{ $featureProduct->name }}" class="image mb-10" style="height: 201px;">
-                            <div class="mask">
-                                <a href="{{ url('catalog/product/'.$featureProduct->uri) }}">
-                                    <p class="name is-size-4">{{ $featureProduct->getProductName() }}</p>
-                                    <p class="price is-size-5">${{ $featureProduct->getFinalPriceGst() }}</p>
-                                </a>
-                            </div>
-                        </div>
-                    {!! div_end() !!}
-                    @endforeach
-                {!! div_end() !!}
-            {!! div_end() !!}
-        {!! div_end() !!}
-        <hr>
-        @endif
         <div class="box is-radiusless mt-20">
             <div class="columns">
                 <div class="column">
@@ -188,6 +160,35 @@
                 </div>
             </div>
         </div>
+
+        @if(isset($featureProducts) && count($featureProducts)>0)
+            <hr>
+            {!! div_row() !!}
+            {!! div_col(1) !!}
+            <i class="far fa-thumbs-up is-size-1 has-text-danger"></i>
+            <br>
+            <p class="has-text-left has-text-danger is-size-7 mt-10">Feature Products</p>
+            {!! div_end() !!}
+            {!! div_col(11) !!}
+            {!! div_row() !!}
+            @foreach($featureProducts as $featureProduct)
+                {!! div_col() !!}
+                <div class="show-mask-on-hover">
+                    <img src="{{ $featureProduct->getProductDefaultImageUrl() }}" alt="{{ $featureProduct->name }}" class="image mb-10" style="height: 201px;">
+                    <div class="mask">
+                        <a href="{{ url('catalog/product/'.$featureProduct->uri) }}">
+                            <p class="name is-size-4">{{ $featureProduct->getProductName() }}</p>
+                            <p class="price is-size-5">${{ $featureProduct->getFinalPriceGst() }}</p>
+                        </a>
+                    </div>
+                </div>
+                {!! div_end() !!}
+            @endforeach
+            {!! div_end() !!}
+            {!! div_end() !!}
+            {!! div_end() !!}
+            <hr>
+        @endif
 
         <el-dialog title="Enquiry" :visible.sync="showSendEnquiryForm">
             <el-form :model="enquiryForm" :rules="rules" ref="enquiryDataForm">
