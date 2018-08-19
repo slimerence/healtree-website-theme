@@ -1,16 +1,22 @@
 <!-- 产品详情及其他 -->
 <div class="content product-additional-wrap pt-40" id="switchable-tabs-app" style="background: #fcfcfc;">
     <div class="tabs">
-        <ul style="padding-left: 0;margin-right: 32px;">
+        <ul style="padding-left: 0;margin-right: 32px; border: none;">
             @if(!empty($product->getProductDescription()))
-            <li class="tab-trigger-btn is-marginless is-active">
+            <li class="tab-trigger-btn is-active" style="{{$agentObject->isPhone() ? 'margin-left: -20px;' : null }}">
                 <a href="#product-description-tab-content">Description</a>
             </li>
             @endif
             @foreach($product_attributes as $key=>$product_attribute)
                 @if($product_attribute->location == \App\Models\Utils\OptionTool::$LOCATION_ADDITIONAL)
             <li class="tab-trigger-btn is-marginless {{ $key==0&&empty($product->getProductDescription()) ? 'is-active' : null }}">
-                <a href="#tab-content-{{$key}}">{{ $product_attribute->name }}</a>
+                <a href="#tab-content-{{$key}}">
+                    @if($agentObject->isPhone() && $product_attribute->name=='The basic principles of mixing')
+                        Mixing
+                    @else
+                        {{ $product_attribute->name }}
+                    @endif
+                </a>
             </li>
                 @endif
             @endforeach
