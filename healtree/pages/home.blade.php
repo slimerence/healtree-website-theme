@@ -5,16 +5,16 @@
             <div class="columns">
                 <div class="column category-block-at-home">
                     <a href="{{ url('/category/view/Essential-Oil-Serial') }}">
+                        <img src="{{ asset('images/frontend/essential-products.jpg') }}" class="image" alt="Essential Oil">
                         <h3 class="has-text-centered">{{ strtoupper('Essential Oil Serial') }}</h3>
                         <p class="has-text-centered">ORGANIC INGREDIENTS</p>
-                        <img src="{{ asset('images/frontend/essential-products.jpg') }}" class="image" alt="Essential Oil">
                     </a>
                 </div>
                 <div class="column category-block-at-home">
                     <a href="{{ url('/category/view/Carrier-Oil') }}">
+                        <img src="{{ asset('images/frontend/health-oil.jpg') }}" class="image" alt="Health Oil">
                         <h3 class="has-text-centered">{{ strtoupper('CARRIER OIL') }}</h3>
                         <p class="has-text-centered">ORGANIC INGREDIENTS</p>
-                        <img src="{{ asset('images/frontend/health-oil.jpg') }}" class="image" alt="Health Oil">
                     </a>
                 </div>
             </div>
@@ -57,8 +57,8 @@
                                     <img src="{{ $featureProduct->getProductDefaultImageUrl() }}" alt="{{ $featureProduct->name }}" class="image mb-10">
                                     <div class="mask">
                                         <a href="{{ url('catalog/product/'.$featureProduct->uri) }}">
-                                            <p class="name is-size-4">{{ $featureProduct->name }}</p>
-                                            <p class="price is-size-5">${{ $featureProduct->getFinalPriceGst() }}</p>
+                                            <p class="name">{{ $featureProduct->name }}</p>
+                                            <p class="price">${{ $featureProduct->getFinalPriceGst() }}</p>
                                         </a>
                                     </div>
                                 </div>

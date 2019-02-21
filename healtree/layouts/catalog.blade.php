@@ -27,7 +27,12 @@
     @include(_get_frontend_layout_path('frontend.top_bar'))
     <section class="section is-paddingless">
         @include( _get_frontend_layout_path('frontend.header_catalog') )
-        <div class="container">
+
+        @if( \Illuminate\Support\Facades\URL::current() == url('/'))
+            <div class="container">
+                @else
+            <div class="container" style="padding-top:160px; ">
+        @endif
             @include( _get_frontend_layout_path('frontend.promotion') )
         </div>
         <div class="container mt-10">

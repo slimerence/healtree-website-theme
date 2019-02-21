@@ -11,6 +11,10 @@ $color-dark-black: #211614;
 
 // Menu bar background color
 
+h1,h2,h3,h4,h5,p,a,span,li,td,div{
+  font-family: Avenir,Helvetica,Arial,sans-serif;
+}
+
 .custom-bg-1{
   background-color: $main-theme-color-1;
 }
@@ -37,11 +41,11 @@ $color-dark-black: #211614;
 // Top bar
 .top-bar{
   background-color: $color-dark-green;
-  padding: 15px;
+  padding: 0.3em;
   .slogan-text{
     color: white;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 14px;
+    font-style: normal;
     .phone-number{
       float: right;
     }
@@ -52,16 +56,33 @@ $color-dark-black: #211614;
     background-color: white !important;
   }
 }
+
+.nav-search-form {
+   margin-right: unset;
+   margin-top: unset;
+   width: unset;
+  input{
+    background-color: transparent;
+  }
+}
+
+.navbar{
+  background-color:transparent;
+}
+.navbar-item img{
+  max-height: 100px;
+}
 // 深色背景的导航菜单栏
 .dark-theme-nav{
-  background-color: white;
+  background-color:transparent;
   .navbar-start{
+    margin:0 2em;
     .navbar-item{
       color: $color-dark-black;
-      font-size: 21px;
-      font-weight: bold;
-      display: block;
-      line-height: 34px;
+      font-size: 0.9em;
+      font-weight: normal;
+      text-transform: uppercase;
+      display: flex;
       &:hover{
         color: $color-dark-green;
         background-color: white;
@@ -99,10 +120,14 @@ $color-dark-black: #211614;
     }
   }
 }
+.content h2{
+  font-weight:500;
+
+}
 
 .category-block-at-home{
   a{
-    font-weight: bold;
+    font-weight:500;
     p{
       color: #adadad;
       &:hover{
@@ -111,11 +136,79 @@ $color-dark-black: #211614;
     }
     h3{
       color: $color-dark-black;
+      font-family: Arapey,Helvetica,Arial,sans-serif;
+      font-weight: 500;
+      font-style: italic;
     }
     img{
       &:hover{
         opacity: 0.7;
       }
+    }
+  }
+  h3{
+    font-family: Arapey,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+}
+
+.nav-ctn{
+  background-color: #ffffffe3;
+  box-shadow: 1px 1px 6px 0px #bfbfbf;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  top:0;
+}
+
+#custom-nav{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-icon{
+  margin-right: 1.5em;
+  a{
+    color:#000;
+    &:hover{
+      color:$main-theme-color-4;
+    }
+  }
+  i{
+    color:#000;
+  }
+}
+.show-mask-on-hover .mask{
+  height:unset;
+
+}
+.show-mask-on-hover .mask a p.price{
+  font-size:15px;
+  font-weight:500;
+}
+.show-mask-on-hover .mask a p.name{
+  margin-top:20px;
+  font-size:14px;
+  font-weight:500;
+}
+.footer{
+  padding: 3rem 1.5rem 2rem;
+  p{
+    margin-bottom: 18px;
+    font-size: .9375rem;
+    letter-spacing: .5px;
+    a{
+    color:#000;
+    }
+  }
+
+  .footer-logo{
+    a{
+      color:#000;
+    }
+    i{
+      color:#000;
     }
   }
 }

@@ -24,7 +24,7 @@
     @endif
 @else
     <!-- Desktop Version -->
-    @include(_get_frontend_layout_path('frontend.top_bar'))
+
     <section class="section is-paddingless">
         @if( \Illuminate\Support\Facades\URL::current() == url('/'))
             <!-- 首页 -->
@@ -48,7 +48,11 @@
             <!-- 非首页 -->
             @include( _get_frontend_layout_path('frontend.header_catalog') )
         @endif
+        @if( \Illuminate\Support\Facades\URL::current() == url('/'))
         <div class="container-fluid">
+        @else
+        <div class="container-fluid" style="padding-top:160px; ">
+        @endif
             @include( _get_frontend_layout_path('frontend.session_flash_msg_box'))
             @yield('content')
             @include( _get_frontend_layout_path('frontend.footer') )
