@@ -80,8 +80,8 @@
                         Copyright © 2019 Healtree.
                     </p>
                     <p class="has-text-centered">
-                        {{ trans('general.Email') }}: <a class="has-text-danger" href="mailto:{{ $siteConfig->contact_email }}">{{ $siteConfig->contact_email }}</a>,&nbsp;&nbsp;
-                        {{ trans('general.Phone') }}: <span class="has-text-danger">{{ $siteConfig->contact_phone }}</span>&nbsp;&nbsp;
+                        Email: <a class="has-text-danger" href="mailto:{{ $siteConfig->contact_email }}">{{ $siteConfig->contact_email }}</a>,&nbsp;&nbsp;
+                        Phone: <span class="has-text-danger">{{ $siteConfig->contact_phone }}</span>&nbsp;&nbsp;
                     </p>
                 </div>
             </div>
